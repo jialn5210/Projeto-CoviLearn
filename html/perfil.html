@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoviLearn</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/perfil.css">
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav id="sidenav" class="nav flex-column col-md-3">
+        <img src="../images/Logo CoviLearn.png" style="height: 120px; width: 240px;">
+        <br><br>
+        <a class="nav-link" href="homepage.html"><i class="fas fa-home"></i>Menu</a>
+        <a class="nav-link" href="ranking.html"><i class="fas fa-medal"></i>LeaderBoard</a>
+        <a class="nav-link" href="jogo.html"><i class="fas fa-gamepad"></i>Game</a>
+        <a class="nav-link" href="quizzes.html"><i class="fas fa-tasks"></i>Quizzes</a>
+        <a class="nav-link" href="perfil.html"><i class="fas fa-user-circle"></i>Profile</a>
+        <a class="nav-link" href="../index.html" id="logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    </nav>
+    <!--End of NavBar-->
+
+    <!--Profile Zone-->
+    <div class="form col-md-9">
+       
+    <div id="avatarLvl">
+
+    </div>
+    <img src="" id="photo" alt="Avatar" class="clickAvatar"
+    style="border-radius: 50%; height: 100px; height: 100px;" data-toggle="modal" data-target="#imageInfo">
+            <p class="clickMe">Click Me!</p>
+        <div class="file d-flex justify-content-center  mb-3">
+            <div class="col-md-6">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" readonly>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <label for="email">Email</label><br>
+                <input type="text" id="email" readonly>
+            </div>
+        </div>
+        <div class="file d-flex justify-content-center  mb-3">
+            <div class="col-md-6">
+                <label for="gender">Gender</label><br>
+                <input type="text" id="gender" readonly>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <label for="adress">Adress</label><br>
+                <input type="text" id="adress" readonly>
+            </div>
+        </div>
+        <div class="file d-flex justify-content-center  mb-3">
+            <div class="col-md-6">
+                <label for="birdthdate">Birth Date</label><br>
+                <input type="text" id="birthdate" readonly>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" readonly>
+            </div>
+        </div>
+        <div class="file d-flex justify-content-center  mb-6">
+            <div class="col-md-6">
+                <button id="editBtn" data-toggle="modal" data-target="#mdlEdit">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="conquista1" class="card-deck row">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title justify-content-center">Play the game 2 times</h5>
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="claimBtn col-lg-3" id="claimBtn1">Claim</button>
+                </div>
+            </div>
+        </div>
+        <div id="conquista2" class="card d-flex justify-content-center mb-3">
+            <div class="card-body justify-content-center">
+                <h5 class="card-title">Play 10 Quizzes</h5>
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="claimBtn col-lg-3" id="claimBtn2">Claim</button>
+                </div>
+            </div>
+        </div>
+        <div id="conquista3" class="card d-flex justify-content-center mb-3">
+            <div class="card-body justify-content-center">
+                <h5 class="card-title">Get 100 points</h5>
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="claimBtn col-lg-3" id="claimBtn3">Claim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Profile Zone-->
+
+    <!--Edit Modal-->
+    <div class="modal fade" id="mdlEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modalBG" src="../images/modal_bg.png" height="250px" width="450px">
+                </div>
+                <div class="modal-body">
+                    <form id="frmRegister">
+                        <div class="form-body">
+                            <div class="file d-flex justify-content-center  mb-3">
+                                <div class="col-md-6">
+                                    <label for="modalUsername">Username</label>
+                                    <input type="text" id="modalUsername" class="form-control text-center modalField"
+                                        required>
+                                </div>
+                                <div class="col-md-6 col-md-offset-2">
+                                    <label for="modalEmail">Email</label>
+                                    <input type="email" id="modalEmail" class="form-control text-center modalField"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="file d-flex justify-content-center  mb-3">
+                                <div class="col-md-6">
+                                    <label for="modalAdress">Adress</label>
+                                    <input type="text" id="modalAdress" class="form-control text-center modalField"
+                                        required>
+                                </div>
+                                <div class="col-md-6 col-md-offset-2">
+                                    <label for="modalPassword">Password</label><br>
+                                    <input type="password" id="modalPassword"
+                                        class="form-control text-center modalField" required>
+                                </div>
+                            </div>
+
+                            <div class="file d-flex justify-content-center mb-3">
+                                <div class="col-md-6 text-center">
+                                    <label for="sltModalGender">Gender</label><br>
+                                    <input type="text" id="modalGender" class="form-control text-center modalField"
+                                        required>
+                                </div>
+                                <div class="col-md-6 col-md-offset-2">
+                                    <label for="birthdate">BirthDate</label>
+                                    <input type="text" id="modalBirthDate" class="form-control text-center modalField"
+                                        required>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <button type="submit" class="btn btn-primary navButton col-lg-3"
+                                id="editModalBtn">Edit</button>
+                        </div>
+                        <div class="modal-footer">
+                            <div id="mdlEditedMsg" class="col-lg-12 d-flex justify-content-center"></div>
+                        </div>
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!--End of Edit Modal-->
+
+    <!--Images Modal-->
+    <div class="modal fade" id="imageInfo" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="col-md-11 text-center">
+                    <h2>Image Info</h2>
+                    <p>Your profile picture will change based on how many points you own</p>
+                    <p>There are 5 pictures in total</p>
+                    <p>Collect Points to Level Up your picture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="module" src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+</body>
+
+
+</html>
